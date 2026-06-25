@@ -1,0 +1,416 @@
+[browser] In HTML, <div> cannot be a descendant of <p>.
+This will cause a hydration error.
+
+  ...
+    <ScrollAndMaybeFocusHandler cacheNode={{rsc:{...}, ...}}>
+      <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                          <Home params={Promise} searchParams={Promise}>
+                            <main className="p-10">
+                              <h1>
+>                             <p className="mb-4 text-lg">
+>                               <div className="mb-4">
+                                ...
+                              ...
+                      ...
+                    ...
+        ...
+ 
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at div (<anonymous>)
+    at Home (app/page.tsx:146:3)
+  144 |       </h1>
+  145 | <p className="mb-4 text-lg">
+> 146 |   <div className="mb-4">
+      |   ^
+  147 |   <label className="mr-2 font-semibold">
+  148 |     Mein Preis:
+  149 |   </label>
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+    at Home.useEffect (app/page.tsx:13:3)
+  11 |
+  12 | useEffect(() => {
+> 13 |   fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
+     |   ^
+  14 |     .then((response) => response.json())
+  15 |     .then((data) => {
+  16 |       setBitcoinPrice(data.bpi.EUR.rate_float);
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+    at Home.useEffect (app/page.tsx:13:3)
+  11 |
+  12 | useEffect(() => {
+> 13 |   fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
+     |   ^
+  14 |     .then((response) => response.json())
+  15 |     .then((data) => {
+  16 |       setBitcoinPrice(data.bpi.EUR.rate_float);
+[browser] In HTML, <p> cannot be a descendant of <p>.
+This will cause a hydration error.
+
+  ...
+    <ScrollAndMaybeFocusHandler cacheNode={{rsc:{...}, ...}}>
+      <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                          <Home params={Promise} searchParams={Promise}>
+                            <main className="p-10">
+                              <h1>
+>                             <p className="mb-4 text-lg">
+>                               <p className="mb-4 text-blue-600 font-bold">
+                                ...
+                              ...
+                      ...
+                    ...
+        ...
+ 
+    at Set.forEach (<anonymous>) (<anonymous>)
+[browser] In HTML, <p> cannot be a descendant of <p>.
+This will cause a hydration error.
+
+  ...
+    <ScrollAndMaybeFocusHandler cacheNode={{rsc:{...}, ...}}>
+      <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                          <Home params={Promise} searchParams={Promise}>
+                            <main className="p-10">
+                              <h1>
+>                             <p className="mb-4 text-lg">
+>                               <p className="mb-4 text-blue-600 font-bold">
+                                ...
+                              ...
+                      ...
+                    ...
+        ...
+ 
+[browser] In HTML, <div> cannot be a descendant of <p>.
+This will cause a hydration error.
+
+  ...
+    <ScrollAndMaybeFocusHandler cacheNode={{rsc:{...}, ...}}>
+      <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                          <Home params={Promise} searchParams={Promise}>
+                            <main className="p-10">
+                              <h1>
+>                             <p className="mb-4 text-lg">
+                                <p>
+>                               <div className="mb-4">
+                                ...
+                              ...
+                      ...
+                    ...
+        ...
+ 
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at p (<anonymous>)
+    at Home (app/page.tsx:146:1)
+  144 |       </h1>
+  145 | <p className="mb-4 text-lg">
+> 146 | <p className="mb-4 text-blue-600 font-bold">
+      | ^
+  147 |   Bitcoin Live Preis: {bitcoinPrice.toFixed(2)} €
+  148 | </p>
+  149 |   <div className="mb-4">
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+    at Home.useEffect (app/page.tsx:13:3)
+  11 |
+  12 | useEffect(() => {
+> 13 |   fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
+     |   ^
+  14 |     .then((response) => response.json())
+  15 |     .then((data) => {
+  16 |       setBitcoinPrice(data.bpi.EUR.rate_float);
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+    at Home.useEffect (app/page.tsx:13:3)
+  11 |
+  12 | useEffect(() => {
+> 13 |   fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
+     |   ^
+  14 |     .then((response) => response.json())
+  15 |     .then((data) => {
+  16 |       setBitcoinPrice(data.bpi.EUR.rate_float);
+[browser] In HTML, <p> cannot be a descendant of <p>.
+This will cause a hydration error.
+
+  ...
+    <ScrollAndMaybeFocusHandler cacheNode={{rsc:{...}, ...}}>
+      <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                          <Home params={Promise} searchParams={Promise}>
+                            <main className="p-10">
+                              <h1>
+>                             <p className="mb-4 text-lg">
+>                               <p className="mb-4 text-blue-600 font-bold">
+                                ...
+                              ...
+                      ...
+                    ...
+        ...
+ 
+[browser] In HTML, <div> cannot be a descendant of <p>.
+This will cause a hydration error.
+
+  ...
+    <ScrollAndMaybeFocusHandler cacheNode={{rsc:{...}, ...}}>
+      <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                          <Home params={Promise} searchParams={Promise}>
+                            <main className="p-10">
+                              <h1>
+>                             <p className="mb-4 text-lg">
+                                <p>
+>                               <div className="mb-4">
+                                ...
+                              ...
+                      ...
+                    ...
+        ...
+ 
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at p (<anonymous>)
+    at Home (app/page.tsx:146:1)
+  144 |       </h1>
+  145 | <p className="mb-4 text-lg">
+> 146 | <p className="mb-4 text-blue-600 font-bold">
+      | ^
+  147 |   Bitcoin Live Preis: {bitcoinPrice.toFixed(2)} €
+  148 | </p>
+  149 |   <div className="mb-4">
+[browser] In HTML, <p> cannot be a descendant of <p>.
+This will cause a hydration error.
+
+  ...
+    <ScrollAndMaybeFocusHandler cacheNode={{rsc:{...}, ...}}>
+      <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                          <Home params={Promise} searchParams={Promise}>
+                            <main className="p-10">
+                              <h1>
+>                             <p className="mb-4 text-lg">
+>                               <p className="mb-4 text-blue-600 font-bold">
+                                ...
+                              ...
+                      ...
+                    ...
+        ...
+ 
+[browser] In HTML, <div> cannot be a descendant of <p>.
+This will cause a hydration error.
+
+  ...
+    <ScrollAndMaybeFocusHandler cacheNode={{rsc:{...}, ...}}>
+      <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                          <Home params={Promise} searchParams={Promise}>
+                            <main className="p-10">
+                              <h1>
+>                             <p className="mb-4 text-lg">
+                                <p>
+>                               <div className="mb-4">
+                                ...
+                              ...
+                      ...
+                    ...
+        ...
+ 
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at p (<anonymous>)
+    at Home (app/page.tsx:146:1)
+  144 |       </h1>
+  145 | <p className="mb-4 text-lg">
+> 146 | <p className="mb-4 text-blue-600 font-bold">
+      | ^
+  147 |   Bitcoin Live Preis: {bitcoinPrice.toFixed(2)} €
+  148 | </p>
+  149 |   <div className="mb-4">
+[browser] In HTML, <p> cannot be a descendant of <p>.
+This will cause a hydration error.
+
+  ...
+    <ScrollAndMaybeFocusHandler cacheNode={{rsc:{...}, ...}}>
+      <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                          <Home params={Promise} searchParams={Promise}>
+                            <main className="p-10">
+                              <h1>
+>                             <p className="mb-4 text-lg">
+>                               <p className="mb-4 text-blue-600 font-bold">
+                                ...
+                              ...
+                      ...
+                    ...
+        ...
+ 
+[browser] In HTML, <div> cannot be a descendant of <p>.
+This will cause a hydration error.
+
+  ...
+    <ScrollAndMaybeFocusHandler cacheNode={{rsc:{...}, ...}}>
+      <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                          <Home params={Promise} searchParams={Promise}>
+                            <main className="p-10">
+                              <h1>
+>                             <p className="mb-4 text-lg">
+                                <p>
+>                               <div className="mb-4">
+                                ...
+                              ...
+                      ...
+                    ...
+        ...
+ 
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at p (<anonymous>)
+    at Home (app/page.tsx:146:1)
+  144 |       </h1>
+  145 | <p className="mb-4 text-lg">
+> 146 | <p className="mb-4 text-blue-600 font-bold">
+      | ^
+  147 |   Bitcoin Live Preis: {bitcoinPrice.toFixed(2)} €
+  148 | </p>
+  149 |   <div className="mb-4">

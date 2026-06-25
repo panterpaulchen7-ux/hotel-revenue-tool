@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Walpurgishof",
+    "rating": 8.2,
+    "price": 139,
+    "genius": true
+  },
+  {
+    "name": "AKZENT Hotel Villa Saxer",
+    "rating": 9.3,
+    "price": 189,
+    "genius": true
+  },
+  {
+    "name": "Harz-Urlaubs-Alm",
+    "rating": 9.1,
+    "price": 165,
+    "genius": true
+  },
+  {
+    "name": "LIONO BoutiqueHotel",
+    "rating": 9.4,
+    "price": 199,
+    "genius": false
+  },
+  {
+    "name": "Romantik Hotel Alte Münze",
+    "rating": 8.9,
+    "price": 159,
+    "genius": false
+  },
+  {
+    "name": "Hotel Goldene Krone",
+    "rating": 8.4,
+    "price": 121,
+    "genius": false
+  }
+]

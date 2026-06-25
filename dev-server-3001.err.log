@@ -1,0 +1,8 @@
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          7664
+- Dir:          C:\Users\e-gru\Demo-codex\Demo-Genie\hotel-revenue-tool
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 7664 /F to stop it.
